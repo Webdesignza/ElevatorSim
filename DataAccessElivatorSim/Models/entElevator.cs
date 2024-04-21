@@ -1,7 +1,12 @@
-﻿namespace DataAccessElevatorSim.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace DataAccessElevatorSim.Models
 {
-    public class entElevator:EntityBase
+    public class entElevator
     {
+        [Key]
+        public int ElevatorId {  get; set; }
+
         public required string ElevatorName { get; set; }
 
         public required string ElevatorType { get; set; }

@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -8,9 +7,13 @@ using System.Threading.Tasks;
 
 namespace DataAccessElevatorSim.Models
 {
-    public class EntityBase
+    public class entErrors
     {
         [Key]
-        int Id;
+        public int ErrorId { get; set; }
+
+        public required string ErrorNumber {  get; set; }
+
+        public required string ErrorDescription { get; set; }
     }
 }
