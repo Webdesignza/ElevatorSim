@@ -7,13 +7,14 @@ using System.Text;
 using System.Threading.Tasks;
 using BusinessLogicElevatorSim;
 using System.Globalization;
+using Spectre.Console;
 
 namespace ElevatorSim
 {
     public static class Global
     {
         // Static Connectionstring to be used in the appplication setup at startup 
-        public static string? strConnectionString;
+        public static string strConnectionString = string.Empty;
 
         /// <summary>
         /// Method to be called at the startup of application to setup all global variables
@@ -49,6 +50,18 @@ namespace ElevatorSim
                                                                              Encoding.UTF8.GetBytes(strKey.Substring(0, 16)));
                 }
             }
+        }
+
+        /// <summary>
+        /// This method will add a heading on the Console display
+        /// </summary>
+        /// <param name="prmHeadingText">The heading to display</param>
+        public static void SetupHeading(string prmHeadingText)
+        {
+
+            // Set a Heading for the application
+            AnsiConsole.Write(
+                new FigletText(prmHeadingText).Color(Color.Red));
         }
     }
 }

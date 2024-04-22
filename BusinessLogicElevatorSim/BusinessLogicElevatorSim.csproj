@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessElivatorSim\DataAccessElevatorSim.csproj" />
+  </ItemGroup>
+
 </Project>
